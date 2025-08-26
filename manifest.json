@@ -1,0 +1,8 @@
+{
+	"manifest_version": 3,
+	"name": "link taker",
+	"version": "1.0.0",
+	"description": "blah-blah-blah",
+	"permissions": ["scripting" , "activeTab"],
+	"background": "./service-worker.js"
+}
