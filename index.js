@@ -1,4 +1,4 @@
-import { takeCurrentURL } from '../handlers/takeCurrentURL.js'
+import { takeCurrentURL } from `./src/handlers/takeCurrentURL`
 
 const buttonURL = document.getElementById('buttonURL');
 

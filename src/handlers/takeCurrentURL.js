@@ -1,6 +1,9 @@
+const URL = 'http://localhost';
+const port = 5439;
+
 export async function takeCurrentURL() {
 	const tab = await chrome.tabs.query({ active: true });
-	fetch('http://localhost:5439/save-url', {
+	fetch(`${URL}:${port}/save-url`, {
 		method: 'POST',
 		headers: {
 			'Content-type':	'application/json'
