@@ -5,7 +5,7 @@
 	"description": "blah-blah-blah",
 	"permissions": ["scripting" , "activeTab"],
 	"action": {
-		"default_popup": "./src/popup/index.html"
+		"default_popup": "index.html"
 	}
 	,
 	"host_permissions": [ 
