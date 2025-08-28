@@ -11,6 +11,14 @@
 		"service_worker": "background.js",
 		"type": "module"
 	},
+	"commands": {
+		"SaveCurrentUrl": {
+			"suggested_key": {
+				"default": "Ctrl+S"
+			},
+			"description": "Saves current URL"
+		}
+	},
 	"host_permissions": [ 
 		"http://localhost:5439/"
 	]
