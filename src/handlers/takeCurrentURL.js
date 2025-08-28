@@ -1,19 +1,21 @@
 const URL = 'http://localhost';
 const port = 5439;
 
-export async function takeCurrentURL() {
-	const tab = await chrome.tabs.query({ active: true });
+export async function saveURL(url, sendResponse) {
 	fetch(`${URL}:${port}/save-url`, {
 		method: 'POST',
 		headers: {
 			'Content-type':	'application/json'
 		},
 		bodyUsed: true,
-		body: JSON.stringify({ url: tab[0].url })
+		body: JSON.stringify({ url: url })
 	})
-		.then( (res) => console.log('url saved',res))
+		.then( (res) => {
+			console.log('url saved',res);
+			sendResponse({ success: 'url saved' });
+		})
 		.catch( (err) => {
-			alert(err);
+			sendResponse({ error: err.message });
 			console.error(err);
 		})
 }

@@ -1,13 +1,16 @@
 {
 	"manifest_version": 3,
 	"name": "link taker",
-	"version": "1.0.0",
-	"description": "blah-blah-blah",
+	"version": "1.1",
+	"description": "Extension that allows you easily put your links in a list",
 	"permissions": ["scripting" , "activeTab"],
 	"action": {
 		"default_popup": "./index.html"
-	}
-	,
+	},
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	},
 	"host_permissions": [ 
 		"http://localhost:5439/"
 	]
